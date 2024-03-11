@@ -1,8 +1,6 @@
 {
-  "name": "@vabene/source",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {},
+  "name": "vabene-mobile",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@expo/metro-config": "~0.17.3",
@@ -23,6 +21,10 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
     "tslib": "^2.3.0"
+  },
+  "scripts": {
+    "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/vabene-mobile && cp package-lock.json apps/vabene-mobile",
+    "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/vabene-mobile"
   },
   "devDependencies": {
     "@expo/cli": "~0.16.5",

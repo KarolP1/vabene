@@ -1,0 +1,24 @@
+{
+  "name": "vabeneapi",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/vabeneapi/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "vabeneapi:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "vabeneapi:build:development"
+        },
+        "production": {
+          "buildTarget": "vabeneapi:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
